@@ -28,6 +28,22 @@ toward over one month, by one developer.
   and inspect properties.
 - A reproducible demonstration investigation, documented end to end.
 
+## Using Threadline
+
+The workflow the MVP is built around, and the one the canvas and API are being designed to
+support:
+
+1. Create an investigation: a graph plus the metadata describing it, stored on your machine.
+2. Add the entity you already know — a domain, IP address, email or username.
+3. Run a transform on it. The context menu offers the transforms that accept that entity type;
+   those needing an API key stay disabled until the key is set in Settings.
+4. Read the graph. New entities land beside the seed, joined by edges labelled with the
+   transform that produced them, so every finding keeps its provenance.
+5. Pivot. Any result can be transformed in turn, which is how one domain becomes subdomains,
+   addresses, certificates and registrants.
+6. Inspect or prune. Select a node to see its properties and where it came from; delete an
+   expansion you do not want without disturbing the rest of the graph.
+
 ## Architecture
 
 Four components, all on the investigator's machine, so investigation data never depends on a
