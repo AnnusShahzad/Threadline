@@ -1,0 +1,32 @@
+# Working documents stay local; README.md is the public summary
+Group1_Proposal.*
+Threadline Project Proposal.md
+*.pdf
+*.odt
+*.docx
+
+# Agent instruction files stay local
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+.cursor/
+.cursorrules
+.github/copilot-instructions.md
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Frontend build output
+node_modules/
+dist/
+
+# Local data and secrets
+*.db
+*.sqlite3
+.env
