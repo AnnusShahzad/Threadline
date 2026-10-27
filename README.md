@@ -11,8 +11,25 @@ inspectable, and extensible through a transform format anyone can implement.
 
 ## Status
 
-Proposal stage. No application code yet; the plan below is what this repository is being built
-toward over one month, by one developer.
+Early scaffold. The backend boots, creates its SQLite schema and answers a health check; the
+client mounts an empty Cytoscape canvas. Entity storage, transforms, settings and the
+interactive graph are still being built.
+
+## Running it locally
+
+Requires Python 3.12, [uv](https://docs.astral.sh/uv/) and Node.js 20 or newer.
+
+    uv sync
+    uv run uvicorn threadline.main:app --reload --port 8000
+
+The page at `http://127.0.0.1:8000` is served from `client/dist`, which is a build artifact:
+
+    cd client
+    npm install
+    npm run build
+
+While working on the client, `npm run dev` serves it on port 5173 and proxies `/api` to the
+backend. Backend checks are `uv run pytest`, `uv run ruff check .` and `uv run mypy src`.
 
 ## What the MVP covers
 

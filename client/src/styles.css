@@ -1,0 +1,60 @@
+:root {
+  color-scheme: dark;
+  --surface: #0f172a;
+  --surface-raised: #1e293b;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --accent: #38bdf8;
+  --danger: #f87171;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: var(--surface);
+  color: var(--text);
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+.toolbar {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--surface-raised);
+  border-bottom: 1px solid #334155;
+}
+
+.toolbar h1 {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.status {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.status[data-state="ok"] {
+  color: var(--accent);
+}
+
+.status[data-state="error"] {
+  color: var(--danger);
+}
+
+.graph {
+  position: relative;
+  min-height: 0;
+  background-image: radial-gradient(#1e293b 1px, transparent 1px);
+  background-size: 24px 24px;
+}

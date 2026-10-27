@@ -1,0 +1,19 @@
+{
+  "name": "threadline-client",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "cytoscape": "^3.34.4"
+  },
+  "devDependencies": {
+    "@types/cytoscape": "^3.21.9",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  }
+}
